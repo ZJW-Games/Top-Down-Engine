@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/DODGE_THEM_GAME_OVER.ogg-0d49ec2aa93e43c00baaa39114667bc9.oggstr"
+
+[deps]
+
+source_file="res://assets/sound/DODGE_THEM_GAME_OVER.ogg"
+dest_files=[ "res://.import/DODGE_THEM_GAME_OVER.ogg-0d49ec2aa93e43c00baaa39114667bc9.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0
