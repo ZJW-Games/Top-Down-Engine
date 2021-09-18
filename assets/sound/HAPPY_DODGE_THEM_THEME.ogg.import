@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/HAPPY_DODGE_THEM_THEME.ogg-f994a7f0fc2a82711453505409108342.oggstr"
+
+[deps]
+
+source_file="res://assets/sound/HAPPY_DODGE_THEM_THEME.ogg"
+dest_files=[ "res://.import/HAPPY_DODGE_THEM_THEME.ogg-f994a7f0fc2a82711453505409108342.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
