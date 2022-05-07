@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/purrple-cat-midnight-snack.mp3-6b6388abef40f3667470566ed2561828.mp3str"
+
+[deps]
+
+source_file="res://assets/sound/purrple-cat-midnight-snack.mp3"
+dest_files=[ "res://.import/purrple-cat-midnight-snack.mp3-6b6388abef40f3667470566ed2561828.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

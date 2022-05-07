@@ -4,7 +4,7 @@
 [ext_resource path="res://Main.gd" type="Script" id=2]
 [ext_resource path="res://Mob.tscn" type="PackedScene" id=3]
 [ext_resource path="res://HUD.tscn" type="PackedScene" id=4]
-[ext_resource path="res://assets/sound/HAPPY_DODGE_THEM_THEME.ogg" type="AudioStream" id=5]
+[ext_resource path="res://assets/sound/purrple-cat-midnight-snack.mp3" type="AudioStream" id=5]
 [ext_resource path="res://assets/sound/DODGE_THEM_GAME_OVER.ogg" type="AudioStream" id=6]
 
 [sub_resource type="Curve2D" id=1]
@@ -19,13 +19,11 @@ Mob = ExtResource( 3 )
 [node name="ColorRect" type="ColorRect" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
-color = Color( 0.207843, 0.815686, 0.729412, 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+color = Color( 0.14902, 0.172549, 0.231373, 1 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
 position = Vector2( 232, 344 )
+scale = Vector2( 2, 2 )
 
 [node name="MobTimer" type="Timer" parent="."]
 wait_time = 0.5
@@ -33,7 +31,7 @@ wait_time = 0.5
 [node name="ScoreTimer" type="Timer" parent="."]
 
 [node name="StartTimer" type="Timer" parent="."]
-wait_time = 2.0
+wait_time = 3.0
 one_shot = true
 
 [node name="StartPosition" type="Position2D" parent="."]
@@ -48,10 +46,13 @@ curve = SubResource( 1 )
 
 [node name="Music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 5 )
+volume_db = -3.0
+pitch_scale = 1.75
 
 [node name="DeathSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 6 )
 volume_db = -5.0
+
 [connection signal="hit" from="Player" to="." method="game_over"]
 [connection signal="ready" from="MobTimer" to="." method="_on_MobTimer_ready"]
 [connection signal="timeout" from="MobTimer" to="." method="_on_MobTimer_timeout"]

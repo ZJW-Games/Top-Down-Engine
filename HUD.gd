@@ -15,7 +15,7 @@ func show_game_over(gameOverMsg):
 	# Wait for message timer to count down
 	yield($MessageTimer, "timeout")
 	
-	$TitleMessage.text = "Dodge Them!"
+	$TitleMessage.text = "ORANGE DUST"
 	$TitleMessage.show()
 	# Make a one-shot timer and wait for it to finish
 	yield(get_tree().create_timer(1), "timeout")

@@ -8,6 +8,10 @@ size = 64
 font_data = ExtResource( 1 )
 
 [sub_resource type="DynamicFont" id=2]
+size = 42
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=6]
 size = 64
 font_data = ExtResource( 1 )
 
@@ -39,10 +43,6 @@ corner_radius_bottom_right = 50
 corner_radius_bottom_left = 50
 corner_detail = 20
 
-[sub_resource type="DynamicFont" id=6]
-size = 64
-font_data = ExtResource( 1 )
-
 [sub_resource type="InputEventAction" id=7]
 action = "ui_select"
 
@@ -53,6 +53,7 @@ shortcut = SubResource( 7 )
 script = ExtResource( 2 )
 
 [node name="ScoreLabel" type="Label" parent="."]
+visible = false
 anchor_right = 1.0
 margin_bottom = 64.0
 custom_fonts/font = SubResource( 1 )
@@ -69,7 +70,7 @@ anchor_bottom = 0.5
 margin_top = -104.0
 margin_bottom = 88.0
 custom_fonts/font = SubResource( 2 )
-text = "Dodge Them!"
+text = "ORANGE DUST"
 align = 1
 autowrap = true
 __meta__ = {
@@ -85,9 +86,6 @@ margin_bottom = 88.0
 custom_fonts/font = SubResource( 2 )
 align = 1
 autowrap = true
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="StartButton" type="Button" parent="."]
 anchor_left = 0.5
@@ -98,16 +96,13 @@ margin_left = -112.0
 margin_top = -200.0
 margin_right = 112.0
 margin_bottom = -100.0
+custom_fonts/font = SubResource( 6 )
 custom_styles/hover = SubResource( 3 )
 custom_styles/pressed = SubResource( 4 )
 custom_styles/normal = SubResource( 5 )
-custom_fonts/font = SubResource( 6 )
 shortcut_in_tooltip = false
 shortcut = SubResource( 8 )
 text = "Start"
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="MessageTimer" type="Timer" parent="."]
 wait_time = 3.0
@@ -125,6 +120,7 @@ __meta__ = {
 [node name="SplashTimer" type="Timer" parent="."]
 wait_time = 3.0
 one_shot = true
+
 [connection signal="pressed" from="StartButton" to="." method="_on_StartButton_pressed"]
 [connection signal="timeout" from="MessageTimer" to="." method="_on_MessageTimer_timeout"]
 [connection signal="timeout" from="SplashTimer" to="." method="_on_SplashTimer_timeout"]

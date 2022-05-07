@@ -92,7 +92,7 @@ func new_game():
 	$StartTimer.start()
 	# Update HUD
 	$HUD.update_score(score)
-	$HUD.show_message("Get Ready")
+	$HUD.show_message("Stop to hide!\nCollect the gems!")
 	$Music.play()
 	# Update enemy path based on screen size
 	screen_size = get_viewport().get_visible_rect().size
